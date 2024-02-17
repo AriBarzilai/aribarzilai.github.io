@@ -5,7 +5,9 @@
   --border: rgb(153, 153, 153);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -19,7 +21,10 @@
   z-index: 900;
 
   /* jagged edge fix */
-  -webkit-backface-visibility:hidden; backface-visibility:hidden; -webkit-background-clip:content-box; background-clip:content-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
 }
 
 .logo {
@@ -49,7 +54,7 @@ header {
 }
 
 /* Add an outline around the burger menu when selected */
-.nav-toggle:focus ~ .nav-toggle-label span i {
+.nav-toggle:focus~.nav-toggle-label span i {
   outline: 2px solid rgba(173, 216, 230, .75);
   border-radius: 1px;
   padding: 6px 0;
@@ -112,11 +117,11 @@ nav a:hover {
   border-bottom: none;
 }
 
-.nav-toggle:checked ~ nav {
+.nav-toggle:checked~nav {
   transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked~nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
@@ -140,17 +145,7 @@ nav a:hover {
   }
 
   nav {
-    all: unset; /* this might cause issues with older Edge versions */
-
-    /* add Edge support if needed
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    */
+    all: unset;
 
     grid-column: 3 / 4;
     display: flex;
@@ -186,7 +181,6 @@ nav a:hover {
   }
 
   nav a:hover::before {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
-
