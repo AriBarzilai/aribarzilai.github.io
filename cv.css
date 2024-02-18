@@ -33,7 +33,7 @@ body.stop-transitions * {
   height: clamp(2em, 5vmax, 3em);
 }
 
-#page-wrap {
+#page-content {
   max-width: 1100px;
   margin: 0px auto;
   padding: 1em;
@@ -203,4 +203,11 @@ footer i[class*="fa-envelope"]:hover {
   line-height: 1.2;
   font-size: 0.8em;
   min-width: min(600px, 100%);
+}
+
+div#error-message {
+  font-weight: bold;
+  color: red;
+  align-items: center;
+  display: none;
 }

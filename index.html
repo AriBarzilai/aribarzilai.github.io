@@ -24,10 +24,9 @@
   <!-- The following pattern defers CSS loading, making page load much faster -->
 
   <link rel="stylesheet" type="text/css" href="cv.css">
-  <link rel="stylesheet" type="text/css" href="nav.css">
 
-  <script src="logic.js" defer></script>
-  <script src="no-transition-on-resize.js" defer></script>
+  <script src="/scripts/logic.js" defer></script>
+  <script src="/scripts/no-transition-on-resize.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -44,8 +43,23 @@
 
 <body>
   <div id="header"></div>
-  <div id="page-wrap">
+  <div id="page-content">
     <h1>Welcome to my site</h1>
+    <div id="error-message">Error: This page requires server-side features that do not work when loaded from file.
+      <br>
+      Please use a web server to view this page. You can do that by running the following in your terminal:
+      <br>
+      <code>python -m http.server</code>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+      <div class="clear"></div>
+    </div>
+
     <div>
       <span class="newstuff">New:</span> <a href="https://github.com/AriBarzilai/nand2tetris" target="_blank"
         rel="noopener">Nand2Tetris:</a> A take on Shimon Shoken's Hack Computer <br>
@@ -72,6 +86,32 @@
     </div>
     <div class="clear"></div>
 
+    <h2>My Journey in Computer Science</h2>
+    <div>
+      <p>
+        I've known I would be a Computer Scientist since I was 10 years old. I've been learning about computers and
+        programming since then. Growing up, I had very skewed expectations of what it means to be a programmer, and
+        assumed that all programmers are expected to constantly be in a rush to learn new concepts and technologies.
+        <br>
+        This is, in no small part, due to the media I consume - I grew up on Youtubers such as Fireship, or youtubers
+        who did things like build an entire working computer inside of videogames such as Minecraft, and assumed that
+        things like this were the norm.
+        <br>
+        Not wanting to be left behind, I've been learning about computers and programming for as long as I can remember.
+        Eventually, I found my love specifically for Game development, and continued to learn things that were needed to
+        enable this hobby. This led me down several rabbitholes such as reading CLRS as a 16 year old and implementing
+        relevant algorithms, such as pathfinding algorithms, Kruskal for maze generation, etc.
+        <br>
+        I had this strange assumption that when I would be studying in university, things like this would be the bare
+        minimum of what I would be expected to know upon beginning my studies. By the time I started University, I'd set
+        my sights on "more interesting" niches, such as Machine Learning and Reinforcement Learning... which I've
+        recently realized is, for the most part, taught in-depth in graduate studies.
+        <br>
+        As a result, in the past year I've started to focus on the basics of ML, and I hope that by next year I'll be
+        able to get a relevant research position in this field, to gain the necessary experience.
+      </p>
+    </div>
+    <div class="clear"></div>
     <h2 id="myJourney">My Journey in Game Development</h2>
     <div>
       As computer graphics is intertwined with game development, I have a strong interest in the field and have
@@ -91,35 +131,7 @@
 
     <div class="clear"></div>
 
-    <footer>
-      <a href="https://scholar.google.com/citations?user=YZcVsRMAAAAJ" target="_blank" rel="noopener"
-        aria-label="google scholar">
-        <i class="ai ai-google-scholar ai-2x"></i>
-      </a>
-
-      <a href="https://www.semanticscholar.org/author/Ohad-Fried/2416503" target="_blank" rel="noopener"
-        aria-label="semantic scholar">
-        <i class="ai ai-semantic-scholar ai-2x"></i>
-      </a>
-
-      <a href="https://www.youtube.com/channel/UCEvgUTPTeHd3PaF-9NZkNdg" target="_blank" rel="noopener"
-        aria-label="youtube">
-        <i class="fa-brands fa-youtube fa-2x" aria-hidden="true"></i>
-      </a>
-
-      <a href="https://twitter.com/ohadf" target="_blank" rel="noopener" aria-label="twitter">
-        <i class="fa-brands fa-x-twitter fa-2x" aria-hidden="true"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/ohadfried/" target="_blank" rel="noopener" aria-label="linkedin">
-        <i class="fa-brands fa-linkedin fa-2x"></i>
-      </a>
-
-      <a href="mailto:ofried@runi.ac.il" aria-label="email">
-        <i class="fa-regular fa-envelope fa-2x" aria-hidden="true"></i>
-      </a>
-    </footer>
-
+    <script src="scripts/detectWebServer.js"></script>
     <script src="/scripts/header.js"></script>
 </body>
 

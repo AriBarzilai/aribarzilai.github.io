@@ -1,4 +1,4 @@
-This is a personal site about me; It's actually good that you gave this exercise, as every time I've started to make such a site to be hosted on Github Pages, I got lazy and stopped mid-way. My site has several pages, detailing who I am, what I aspire to do, projects I've done, et cetera.
+This is a personal site about me. My site has several pages, detailing who I am, what I aspire to do, projects I've done, et cetera.
 
 **Q1:**:
 
@@ -22,7 +22,9 @@ I detail below what each of my javascript files do:
 
 * _/scripts/header.js:_ Responsible for fetching the header, which is stored in /content/header.html; we use this on every single page. I use javascript to remove reuse of code and enable quickly updating this element on all pages.
 
-* _/_no-transition-on-resize.js:_ Disables unwanted CSS transitions during resize of the window.
+* _/scripts/no-transition-on-resize.js:_ Disables unwanted CSS transitions during resize of the window.
+
+* _/scripts/detectWebServer.js:_ Ensures that the site is not loaded from file; if it is, displays an error message and instructs the user to open a local http server.
 
 **Q4:**
 
