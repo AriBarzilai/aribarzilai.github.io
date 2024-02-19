@@ -2,7 +2,7 @@
 
 :root {
   --background: rgba(255, 255, 255, 0.95);
-  --border: rgb(153, 153, 153);
+  --border: #996633;
 }
 
 *,
@@ -12,13 +12,15 @@
 }
 
 #me {
-  height: 2em;
-  position: relative;
-  top: 0.8em;
-  rotate: -4deg;
-  margin-right: 0.3em;
-  box-shadow: 0 0 0 0.7px var(--border);
-  z-index: 900;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(50px);
+  transform: translateX(-150px);
+  object-fit: cover;
+  border: 1px solid #996633;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   /* jagged edge fix */
   -webkit-backface-visibility: hidden;
@@ -93,7 +95,7 @@ nav li {
 }
 
 nav a {
-  color: black;
+  color: #663300;
   text-decoration: none;
   border-bottom: none;
   font-size: 0.8em;
@@ -149,7 +151,7 @@ nav a:hover {
 
     grid-column: 3 / 4;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -167,20 +169,29 @@ nav a:hover {
     position: relative;
   }
 
-  nav a::before {
+  nav a::before,
+  nav a::after {
     content: '';
     display: block;
-    height: 4px;
-    background: black;
+    height: 1px;
+    background: #996633;
     position: absolute;
-    top: -.75em;
     left: 0;
     right: 0;
     transform: scale(0, 1);
     transition: transform ease-in-out 250ms;
   }
 
-  nav a:hover::before {
+  nav a::before {
+    top: -.5em;
+  }
+
+  nav a::after {
+    bottom: -.4em;
+  }
+
+  nav a:hover::before,
+  nav a:hover::after {
     transform: scale(1, 1);
   }
 }

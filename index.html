@@ -6,10 +6,10 @@
   <title>Ari @ RUni</title>
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/v3/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/v3/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/v3/favicon-16x16.png">
-  <link rel="manifest" href="/favicons/v3/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
 
   <meta charset="UTF-8">
   <meta name="description"
@@ -23,9 +23,8 @@
 
   <!-- The following pattern defers CSS loading, making page load much faster -->
 
-  <link rel="stylesheet" type="text/css" href="cv.css">
+  <link rel="stylesheet" type="text/css" href="/cv.css">
 
-  <script src="/scripts/logic.js" defer></script>
   <script src="/scripts/no-transition-on-resize.js" defer></script>
 
   <script type="application/ld+json">
@@ -45,19 +44,15 @@
   <div id="header"></div>
   <div id="page-content">
     <h1>Welcome to my site</h1>
-    <div id="error-message">Error: This page requires server-side features that do not work when loaded from file.
-      <br>
-      Please use a web server to view this page. You can do that by running the following in your terminal:
-      <br>
-      <code>python -m http.server</code>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
-      <div class="clear"></div>
+    <div id="error-message" style="color:red; font-weight:bold">
+      <h1>Error:</h1>
+      <p>If you are seeing this message, it's because this site requires server-side features that do not work when
+        loaded from file
+        <br>
+        Please use a web server to view this page. You can do that by running the following in your terminal:
+        <br>
+        <code>python -m http.server</code>
+      </p>
     </div>
 
     <div>
